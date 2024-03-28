@@ -1,0 +1,5 @@
+[*] Rotation Evaluation 
+Acc(pi/6) = 90.93%, Mederr = 5.22(deg)
+[*] Translation Evaluation 
+Relative L2 Error = 4.84%
+[-] [eX, eY, eZ] (%) = [5.839526909870686, 4.958984259352024, 4.767310582202517] 

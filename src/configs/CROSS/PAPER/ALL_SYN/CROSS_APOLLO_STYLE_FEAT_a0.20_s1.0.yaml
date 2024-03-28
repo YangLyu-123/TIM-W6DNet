@@ -1,0 +1,20 @@
+DEVICE: 'cuda:0'
+MODEL:
+  TYPE: 'W6DNet' 
+DATASET:
+  NAME: 'ApolloStyleDataset'
+  APOLLO_LABEL_SET: (0, ) # a subset of (0,1,2,3,4)
+  MODE: 'train'
+  ROOT: '/media/yanglyu/YangLyu_Data5/YangLyu/PoseEstimation/dataset/cross' # put your dataset root here
+  RESIZE: 256
+OUTPUT: '/media/yanglyu/DRIVING_1/PoseEstimation/codes/W6DNet/outputs' # put your output root here
+SOLVER:
+  OPTIM: "ADAM"
+  LR_SCHEDULE: 'cosine' # 'multi-lr'
+TRAINER:
+  EPOCH: 150
+  LR: 0.0001
+  BATCH_SIZE: 64
+  ETA_MIN: 5e-5
+  LR_DECAY: 0.1
+  LR_DECAY_STEP: (5000, 10000)

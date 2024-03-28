@@ -1,0 +1,39 @@
+BACKBONE:
+  N_CLASSES: 79
+DATASET:
+  APOLLO_LABEL_SET:
+  - 0
+  MODE: train
+  NAME: ApolloStyleDataset
+  N_PCD: 1000
+  RESIZE: 256
+  ROOT: /media/yanglyu/YangLyu_Data5/YangLyu/PoseEstimation/dataset/cross
+  SCENE: city
+  SET:
+  - city-CameraRenderSubStreet.001
+  SYN_SET: []
+  TEMPLATE_PCD: false
+DEVICE: cuda:0
+LOSS:
+MODEL:
+  TYPE: W6DNet
+  WEIGHTS: ''
+OUTPUT: '/media/yanglyu/DRIVING_1/PoseEstimation/codes/W6DNet/paper_results/'
+SOLVER:
+  LR_SCHEDULE: cosine
+  OPTIM: ADAM
+TRAINER:
+  BATCH_SIZE: 64
+  EPOCH: 150
+  ETA_MIN: 5.0e-05
+  LOSS_WEIGHT_DECAY: 1000
+  LR: 0.0001
+  LR_DECAY: 0.1
+  LR_DECAY_STEP:
+  - 5000
+  - 10000
+  MULTI_GPUS: false
+  N_ITER: 5000
+  WARM_UP_STEP: 0
+VERSION: 2
+
